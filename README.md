@@ -1,12 +1,13 @@
 hidy_release_upgrade
 ====================
 
-[root@localhost releases]# erl
-Erlang R16B03 (erts-5.10.4) [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
+###[root@localhost releases]# erl
+###Erlang R16B03 (erts-5.10.4) [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
 
-Eshell V5.10.4  (abort with ^G)
-1> application:start(sasl).
+#####Eshell V5.10.4  (abort with ^G)
+#####1> application:start(sasl).
 
+```
 =PROGRESS REPORT==== 23-Jan-2014::12:39:59 ===
           supervisor: {local,sasl_safe_sup}
              started: [{pid,<0.39.0>},
@@ -24,6 +25,7 @@ Eshell V5.10.4  (abort with ^G)
                        {restart_type,permanent},
                        {shutdown,2000},
                        {child_type,worker}]
+
 
 =PROGRESS REPORT==== 23-Jan-2014::12:39:59 ===
           supervisor: {local,sasl_sup}
@@ -48,7 +50,9 @@ Eshell V5.10.4  (abort with ^G)
 =PROGRESS REPORT==== 23-Jan-2014::12:39:59 ===
          application: sasl
           started_at: nonode@nohost
+
 ok
+
 2> release_handler:unpack_release("hidy-1").
 {ok,"1"}
 3> release_handler:which_releases().
@@ -67,9 +71,10 @@ ok
  {"OTP  APN 181 01","R16B03",[],permanent}]
 7> q().
 ok
-
-================
-[root@localhost releaseserl -boot /usr/erlang/lib/erlang/releases/1/start
+```
+=======================
+####[root@localhost releaseserl -boot /usr/erlang/lib/erlang/releases/1/start
+```
 Erlang R16B03 (erts-5.10.4) [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
 
 
@@ -161,8 +166,8 @@ Eshell V5.10.4  (abort with ^G)
  {"OTP  APN 181 01","R16B03",[],permanent}]
 9>q().
 ok
-
+```
 ========================
-失败告终，unpacked 状态无法更新为current。
+###失败告终，unpacked 状态无法更新为current。
 
-请哪位知道答案的，请邮件 d@wanghaowei.com
+###请哪位知道答案的，请邮件 d@wanghaowei.com
