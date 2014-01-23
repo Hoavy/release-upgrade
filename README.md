@@ -2,12 +2,13 @@ hidy_release_upgrade
 ====================
 
 ###[root@localhost releases]# erl
-###Erlang R16B03 (erts-5.10.4) [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
-
-#####Eshell V5.10.4  (abort with ^G)
-#####1> application:start(sasl).
-
 ```
+Erlang R16B03 (erts-5.10.4) [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
+
+Eshell V5.10.4  (abort with ^G)
+
+1> application:start(sasl).
+
 =PROGRESS REPORT==== 23-Jan-2014::12:39:59 ===
           supervisor: {local,sasl_safe_sup}
              started: [{pid,<0.39.0>},
