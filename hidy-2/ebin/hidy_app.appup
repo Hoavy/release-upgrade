@@ -1,0 +1,6 @@
+{"2",
+    [{"1", [{restart_application, hidy_app}
+              ]}],
+    [{"1", [{restart_application, hidy_app}
+              ]}]
+}.
