@@ -73,7 +73,7 @@ ok
 ok
 ```
 =======================
-####[root@localhost releaseserl -boot /usr/erlang/lib/erlang/releases/1/start
+####[root@localhost releases]# erl -boot /usr/erlang/lib/erlang/releases/1/start
 ```
 Erlang R16B03 (erts-5.10.4) [source] [64-bit] [async-threads:10] [hipe] [kernel-poll:false]
 
