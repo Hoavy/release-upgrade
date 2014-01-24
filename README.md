@@ -169,6 +169,29 @@ Eshell V5.10.4  (abort with ^G)
 ok
 ```
 ========================
-###失败告终，unpacked 状态无法更新为current。
 
-###请哪位知道答案的，请邮件 d@wanghaowei.com
+
+```
+{sys, [
+    {lib_dirs, ["/Users/tuan/Desktop/hidy_release_upgrade"]},
+    {erts, [{mod_cond, derived},
+            {app_file, strip}]},
+    {rel, "hidy", "1",
+     [kernel, stdlib, sasl, hidy_app]},
+    {boot_rel, "hidy"},
+    {relocatable, true},
+    {profile, embedded},
+    {app_file, strip},
+    {incl_cond, exclude},
+    {excl_app_filters, ["_tests.beam"]},
+    {excl_archive_filters, [".*"]},
+    {app, stdlib, [{mod_cond, derived}, {incl_cond, include}]},
+    {app, kernel, [{incl_cond, include}]},
+    {app, sasl, [{incl_cond, include}]},
+    {app, hidy_app, [{vsn, "1"}, {incl_cond, include}]}
+]}.
+```
+
+===========================
+
+####最终还是要通过sys.config解决热更新，如果采用erlang systools 进行打包会出现各种上述奇怪问题，而且发布到默认安装的erlang目录下，一切的根源就在这里。
